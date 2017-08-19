@@ -7,7 +7,7 @@
     <session-factory>
 
         <property name="connection.url">jdbc:mysql://localhost:3306/hibernate?useUnicode=true&amp;characterEncoding=utf8</property>
-        <!--指明哪种类型的数据库-->
+        <!--指明哪种类型的数据-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">lanouhn</property>
