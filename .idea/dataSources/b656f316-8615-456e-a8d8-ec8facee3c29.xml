@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hibernate">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="gjp"/>
+    <schema id="4" parent="1" name="hero"/>
+    <schema id="5" parent="1" name="hero_store"/>
+    <schema id="6" parent="1" name="Homework"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="lol"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="Project"/>
+    <schema id="12" parent="1" name="student"/>
+    <schema id="13" parent="1" name="supermarket"/>
+    <schema id="14" parent="1" name="user"/>
+    <schema id="15" parent="1" name="yinhang"/>
+    <table id="16" parent="2" name="equip_info"/>
+    <table id="17" parent="2" name="force_info"/>
+    <table id="18" parent="2" name="fruit"/>
+    <table id="19" parent="2" name="hero_equip"/>
+    <table id="20" parent="2" name="hero_info"/>
+    <table id="21" parent="2" name="people"/>
+    <table id="22" parent="2" name="people1"/>
+    <table id="23" parent="2" name="people2"/>
+    <column id="24" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="25" parent="16" name="price">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="26" parent="16" name="eid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="16" name="PRIMARY">
+      <ColNames>eid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="30" parent="17" name="area">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="31" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="34" parent="18" name="price">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="35" parent="18" name="area">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="36" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="19" name="hid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="19" name="eid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="19" name="eid">
+      <ColNames>eid</ColNames>
+    </index>
+    <key id="40" parent="19" name="PRIMARY">
+      <ColNames>hid
+eid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="19" name="FKag8t0923duvq0udktf69g0ewq">
+      <ColNames>hid</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>hero_info</RefTableName>
+      <RefColNames>hid</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="19" name="hero_equip_ibfk_1">
+      <ColNames>hid</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>hero_info</RefTableName>
+      <RefColNames>hid</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="19" name="FKdwvsahkm5thw57k9fo1844dp1">
+      <ColNames>eid</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>equip_info</RefTableName>
+      <RefColNames>eid</RefColNames>
+    </foreign-key>
+    <foreign-key id="44" parent="19" name="hero_equip_ibfk_2">
+      <ColNames>eid</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>equip_info</RefTableName>
+      <RefColNames>eid</RefColNames>
+    </foreign-key>
+    <column id="45" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="46" parent="20" name="sex">
+      <Position>3</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="47" parent="20" name="force_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="48" parent="20" name="hid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <index id="49" parent="20" name="FKoam30u4g5sw6dhm4jtjcr2d96">
+      <ColNames>force_id</ColNames>
+    </index>
+    <key id="50" parent="20" name="PRIMARY">
+      <ColNames>hid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="51" parent="20" name="FKoam30u4g5sw6dhm4jtjcr2d96">
+      <ColNames>force_id</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>force_info</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="52" parent="21" name="userid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="21" name="uname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="54" parent="21" name="lname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="55" parent="21" name="lpwd">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="56" parent="21" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="57" parent="21" name="birthday">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="58" parent="21" name="education">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="59" parent="21" name="telephone">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="60" parent="21" name="interest">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="21" name="path">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="21" name="filename">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="63" parent="21" name="PRIMARY">
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="22" name="userid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="65" parent="22" name="uname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="22" name="lname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="67" parent="22" name="lpwd">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="68" parent="22" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="69" parent="22" name="birthday">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="70" parent="22" name="education">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="71" parent="22" name="telephone">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="72" parent="22" name="interest">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="73" parent="22" name="path">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="74" parent="22" name="filename">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="75" parent="22" name="PRIMARY">
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="23" name="userid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="77" parent="23" name="uname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="78" parent="23" name="lname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="23" name="lpwd">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="80" parent="23" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="81" parent="23" name="birthday">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="82" parent="23" name="education">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="83" parent="23" name="telephone">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="84" parent="23" name="interest">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="85" parent="23" name="path">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="23" name="filename">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="87" parent="23" name="PRIMARY">
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

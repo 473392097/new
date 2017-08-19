@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lanou.domain.EquipInfo" table="equip_info" schema="hibernate">
+        <id name="id">
+            <column name="eid" sql-type="int(11)"/>
+            <generator class="increment"></generator>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="int(11)" not-null="true"/>
+        </property>
+
+
+        <!--
+           set:
+           name集合属性名
+           key
+           column 别人引用本表的外键列表
+        -->
+
+        <set name="heroInfos"  table="hero_equip" inverse="true">
+            <!--装备id-->
+            <key column="eid"></key>
+            <many-to-many class="com.lanou.domain.HeroInfo" column="hid"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
